@@ -279,8 +279,10 @@
                 data:$("#submit-form").serialize(),
                 method:"post",
                 success:function (response){                  
-                    alert("Form submitted successfully");
-                    window.location.reload();                    
+                    document.getElementsByClassName("sent-message")[0].style.display="block";
+                    setTimeout(function () {
+                      window.location.reload();
+                    }, 5000);                                       
                 },
                 error:function (err){
                     alert("Something Error");
